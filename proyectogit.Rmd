@@ -1,0 +1,45 @@
+---
+title: "proyecto"
+author: "Paula Ramirez"
+date: "2025-01-23"
+output:
+  html_document: proyecto git
+  word_document: default
+  pdf_document: default
+---
+
+```{r}
+
+Datase=read.csv
+library(ggplot2)
+install.packages("gridExtra")
+library(gridExtra)
+
+p1 <- ggplot(data = Datase, aes(x=trat, y =AQ_ALOX5)) + geom_boxplot() + theme(legend.position = "none")
+p2 <- ggplot(data = Datase, aes(x=trat, y =AQ_CD274)) + geom_boxplot() + theme(legend.position = "none")
+p3 <- ggplot(data = Datase, aes(x=trat, y =AQ_CHKA)) + geom_boxplot() + theme(legend.position = "none")
+p4 <- ggplot(data = Datase, aes(x=trat, y =AQ_CSF2)) + geom_boxplot() + theme(legend.position = "none")
+p5 <- ggplot(data = Datase, aes(x=trat, y =AQ_FOXO3)) + geom_boxplot() + theme(legend.position = "none")
+p6 <- ggplot(data = Datase, aes(x=trat, y =AQ_IL6)) + geom_boxplot() + theme(legend.position = "none")
+p7 <- ggplot(data = Datase, aes(x=trat, y =AQ_LDHA)) + geom_boxplot() + theme(legend.position = "none")
+p8 <- ggplot(data = Datase, aes(x=trat, y =AQ_LIF)) + geom_boxplot() + theme(legend.position = "none")
+p9 <- ggplot(data = Datase, aes(x=trat, y =AQ_MAPK1)) + geom_boxplot() + theme(legend.position = "none")
+p10 <- ggplot(data = Datase, aes(x=trat, y =AQ_NOS2)) + geom_boxplot() + theme(legend.position = "none")
+p11 <- ggplot(data = Datase, aes(x=trat, y =AQ_IFNG)) + geom_boxplot() + theme(legend.position = "none")
+p12 <- ggplot(data = Datase, aes(x=trat, y =AQ_PDCD1)) + geom_boxplot() + theme(legend.position = "none")
+p13 <- ggplot(data = Datase, aes(x=trat, y =AQ_PPARG)) + geom_boxplot() + theme(legend.position = "none")
+p14 <- ggplot(data = Datase, aes(x=trat, y =AQ_TGFB1)) + geom_boxplot() + theme(legend.position = "none")
+p15 <- ggplot(data = Datase, aes(x=trat, y =AQ_TNF)) + geom_boxplot() + theme(legend.position = "none")
+
+library(patchwork)
+
+combined_plot <- p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10 + p11 + p12 + p13 + p14 + p15 + plot_layout(ncol = 3)
+
+print(combined_plot)
+
+
+
+```
+
+
+
