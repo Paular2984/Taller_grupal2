@@ -5,4 +5,4 @@ En este proyecto se aplicaran el paquete Tidyverse y la libreria ggplo2 desde el
 ## Objetivos 
 Teniendo en cuenta los siguientes genes: **AQ_ALOX5, AQ_CD274, AQ_CHKA, AQ_CSF2, AQ_FOXO3, AQ_IL6, AQ_LDHA, AQ_LIF, AQ_MAPK1, AQ_NOS2, AQ_IFNG, AQ_PDCD1, AQ_PPARG, AQ_TGFB1, AQ_TNF** se realizar un diagrama de cajas en el que se visualiza por cada expresion de gen 2 cajas uno para tratamiento A y otro para B, se crea una grafica conjunta para visualizarlos mejor.
 ## Instrucciones de uso 
-Todo es scrip es para ser aplicado en el programa de Rstudio, tambien se carga el dataset en formato cvs para aplicar el codigo adecuadamente. Se crea una carpeta llamada *Proyecto_expresion_Genes* el cual cuenta con el archivo de scrips y la bases de datos **dataset expresion genes.csv**
+Todo es scrip es para ser aplicado en el programa de Rstudio, tambien se carga el dataset en formato cvs para aplicar el codigo adecuadamente. Se crea una carpeta llamada *Proyecto_expresion_Genes* el cual cuenta con el archivo de scrips, la bases de datos **dataset expresion genes.csv** y **LICENSE**
