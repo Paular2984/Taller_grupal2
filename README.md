@@ -15,9 +15,10 @@ Teniendo en cuenta los siguientes genes: **AQ_ALOX5, AQ_CD274, AQ_CHKA, AQ_CSF2,
 
 ## Objetivo 2
 <div align="justify">
-Teniendo en cuenta los siguientes parámetros bioquímicos para toda la población: **glucosa, leucocitos, linfocitos, neutrofilos, chol, hdl, hierro, igA, igE, igG, igN, ldl, pcr, transferrina, trigliceridos, cpk**, se realizara un histograma en el que se visualice la frecuencia de cada variable utilizando aproximadamente 30 bins (a mayor bins, mayor número de barras). Por ultimo, con ayuda de la libreria patchwork, se realizara una grafica conjunta para visualizarlos de manera grupal. 
+Teniendo en cuenta los siguientes parámetros bioquímicos para toda la población: glucosa, leucocitos, linfocitos, neutrofilos, chol, hdl, hierro, igA, igE, igG, igN, ldl, pcr, transferrina, trigliceridos, cpk, se realizara un histograma en el que se visualice la frecuencia de cada variable utilizando aproximadamente 30 bins (a mayor bins, mayor número de barras). Por ultimo, con ayuda de la libreria patchwork, se realizara una grafica conjunta para visualizarlos de manera grupal. 
 
 </div>
+
 ## Instrucciones de uso 
 <div align="justify">
   
