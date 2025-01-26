@@ -1,0 +1,144 @@
+---
+title: "complemento_script_histogramas"
+author: "Cristian Martínez"
+date: "2025-01-25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+```
+
+Es necesario implementar las librerias ggplot2 y dplyr para la visualización de los histogramas. 
+
+```{r}
+#################################################################
+##                           HISTOGRAMAS                       ##
+#################################################################
+
+plot_1 <- ggplot(df, aes(x = glucosa , fill = glucosa)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "Glucosa", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_2 <- ggplot(df, aes(x = leucocitos , fill = leucocitos)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "Leucocitos", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_3 <- ggplot(df, aes(x = linfocitos , fill = linfocitos)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "Linfocitos", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_4 <- ggplot(df, aes(x = neutrofilos , fill = neutrofilos)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "Neutrofilos", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_5 <- ggplot(df, aes(x = chol , fill = chol)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "chol", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_6 <- ggplot(df, aes(x = hdl , fill = hdl)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "hdl", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_7 <- ggplot(df, aes(x = hierro , fill = hierro)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "Hierro", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_8 <- ggplot(df, aes(x = igA , fill = igA)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "igA", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_9 <- ggplot(df, aes(x = igE , fill = igE)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "igE", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_10 <- ggplot(df, aes(x = igG , fill = igG)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "igG", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_11 <- ggplot(df, aes(x = igN , fill = igN)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "igN", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_12 <- ggplot(df, aes(x = ldl , fill = ldl)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "ldl", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_13 <- ggplot(df, aes(x = pcr , fill = pcr)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "PCR", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_14 <- ggplot(df, aes(x = transferrina , fill = transferrina)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "Transferrina", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_15 <- ggplot(df, aes(x = trigliceridos , fill = trigliceridos)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "Trigliceridos", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+plot_16 <- ggplot(df, aes(x = cpk , fill = cpk)) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = 'yellow', color = "black", alpha = 0.4, position = "identity") +
+  geom_density(color = 'red', size = 1.5 ) +
+  labs(title = "cpk", x = "Distribución", y = "Frecuencia") +
+  theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+
+combined_plot <- plot_1 + plot_2 + plot_3 + plot_4 + plot_5 + 
+  plot_6 + plot_7 + plot_8 + plot_9 + plot_10 + plot_11 + plot_12 + 
+  plot_13 + plot_14 + plot_15 + plot_16 + plot_layout(ncol = 4)
+
+print(combined_plot)
+```
+
